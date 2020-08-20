@@ -16,6 +16,7 @@
 		005A17E224EC0CE1008B06FF /* CatonomiconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005A17E124EC0CE1008B06FF /* CatonomiconTests.swift */; };
 		005A17ED24EC0CE1008B06FF /* CatonomiconUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005A17EC24EC0CE1008B06FF /* CatonomiconUITests.swift */; };
 		005A17FB24EEC0A2008B06FF /* PopupDismissViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005A17FA24EEC0A2008B06FF /* PopupDismissViewController.swift */; };
+		005A17FD24EEC6D3008B06FF /* gittest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005A17FC24EEC6D3008B06FF /* gittest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		005A17EC24EC0CE1008B06FF /* CatonomiconUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatonomiconUITests.swift; sourceTree = "<group>"; };
 		005A17EE24EC0CE1008B06FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		005A17FA24EEC0A2008B06FF /* PopupDismissViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupDismissViewController.swift; sourceTree = "<group>"; };
+		005A17FC24EEC6D3008B06FF /* gittest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gittest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				005A17D524EC0CE1008B06FF /* LaunchScreen.storyboard */,
 				005A17D824EC0CE1008B06FF /* Info.plist */,
 				005A17FA24EEC0A2008B06FF /* PopupDismissViewController.swift */,
+				005A17FC24EEC6D3008B06FF /* gittest.swift */,
 			);
 			path = Catonomicon;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				005A17FB24EEC0A2008B06FF /* PopupDismissViewController.swift in Sources */,
+				005A17FD24EEC6D3008B06FF /* gittest.swift in Sources */,
 				005A17CF24EC0CE0008B06FF /* ViewController.swift in Sources */,
 				005A17CB24EC0CE0008B06FF /* AppDelegate.swift in Sources */,
 				005A17CD24EC0CE0008B06FF /* SceneDelegate.swift in Sources */,
