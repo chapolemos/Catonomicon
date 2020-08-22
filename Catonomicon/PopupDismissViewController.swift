@@ -11,7 +11,7 @@ import UIKit
 
 
 class PopupDismissViewController: UIViewController {
-
+let badURL = URL(string: "https://cdn2.thecatapi.com/images/cv7.jpg")
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,10 +20,10 @@ class PopupDismissViewController: UIViewController {
         let testURL = "https://api.sunrise-sunset.org/json?date=2020-01-01&lat=-74.0060&lng=40.7128&formatted=0"
         let cfURL = "https://catfact.ninja/fact?max_length=140"
         //let factReqURL =\
-        let badURL = URL(string: "https://cdn2.thecatapi.com/images/cv7.jpg")
+        //let badURL = URL(string: "https://cdn2.thecatapi.com/images/cv7.jpg")
         getData(from: gifReqURL)
-        loadPic.loadPic(url: badURL!)
-        // Do any additional setup after loading the view
+        //loadPic.loadPic(url: badURL!)
+        // Do any additional setup after loading the view.
     }
     
     @IBOutlet weak var loadPic: UIImageView!
@@ -49,7 +49,9 @@ class PopupDismissViewController: UIViewController {
             guard let json = result?[0] else {
                 return
             }
-            print(json.url)
+
+            var catPic = URL(string: json.url)
+            self.loadPic.loadPicFunc(url: catPic!)
             })
             task.resume()
     }
@@ -98,7 +100,7 @@ class PopupDismissViewController: UIViewController {
 }
 
 extension UIImageView {
-    func loadPic(url: URL){
+    func loadPicFunc(url: URL){
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: url){
                 if let image = UIImage(data:data){
