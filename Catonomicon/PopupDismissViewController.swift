@@ -20,12 +20,14 @@ class PopupDismissViewController: UIViewController {
         let testURL = "https://api.sunrise-sunset.org/json?date=2020-01-01&lat=-74.0060&lng=40.7128&formatted=0"
         let cfURL = "https://catfact.ninja/fact?max_length=140"
         //let factReqURL =\
+        let badURL = URL(string: "https://cdn2.thecatapi.com/images/cv7.jpg")
         getData(from: gifReqURL)
-       
+        loadPic.loadPic(url: badURL!)
         // Do any additional setup after loading the view.
     }
     
-   
+    @IBOutlet weak var loadPic: UIImageView!
+    
     private func getData(from url: String){
         print("getData called.")
         let task = URLSession.shared.dataTask(with: URL(string:url)!, completionHandler: {data, response, error in
@@ -57,7 +59,7 @@ class PopupDismissViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
    
-    @IBOutlet weak var loadPic: UIImageView!
+
   
     
     /*struct Resp: Codable {
@@ -92,5 +94,20 @@ class PopupDismissViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+}
 
+extension UIImageView {
+    func loadPic(url: URL){
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url){
+                if let image = UIImage(data:data){
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+        
+    }
 }
