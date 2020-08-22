@@ -23,7 +23,7 @@ class PopupDismissViewController: UIViewController {
         let badURL = URL(string: "https://cdn2.thecatapi.com/images/cv7.jpg")
         getData(from: gifReqURL)
         loadPic.loadPic(url: badURL!)
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view
     }
     
     @IBOutlet weak var loadPic: UIImageView!
