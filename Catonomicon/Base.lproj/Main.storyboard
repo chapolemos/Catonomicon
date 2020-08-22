@@ -134,14 +134,21 @@
                                     <action selector="dismissPopup:" destination="mqL-Gg-5PP" eventType="touchUpInside" id="hPD-f0-gFO"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xD8-3r-9fH">
+                                <rect key="frame" x="0.0" y="171" width="414" height="358"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0039215686269999999" green="0.3411764706" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="9Fu-SX-u8L"/>
                     </view>
+                    <connections>
+                        <outlet property="loadPic" destination="xD8-3r-9fH" id="s7D-fz-Ylt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gEL-jq-mcV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1762" y="135"/>
+            <point key="canvasLocation" x="1760.8695652173915" y="134.59821428571428"/>
         </scene>
     </scenes>
     <resources>

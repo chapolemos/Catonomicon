@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class PopupDismissViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -18,61 +20,62 @@ class PopupDismissViewController: UIViewController {
         let testURL = "https://api.sunrise-sunset.org/json?date=2020-01-01&lat=-74.0060&lng=40.7128&formatted=0"
         let cfURL = "https://catfact.ninja/fact?max_length=140"
         //let factReqURL =\
-        getData(from: cfURL)
+        getData(from: gifReqURL)
        
         // Do any additional setup after loading the view.
     }
     
    
     private func getData(from url: String){
-        print("chamou")
+        print("getData called.")
         let task = URLSession.shared.dataTask(with: URL(string:url)!, completionHandler: {data, response, error in
             guard let data = data, error == nil else {
-                print ("error")
+                print ("Error loading data.")
                 return
             }
-            //Conversão dos dados
-            var result: PicResp?
+            //Decode dos dados
+            var result: [PicResp]?
             do {
-                print("do")
-                result = try JSONDecoder().decode(PicResp.self, from: data) //Morre nessa linha
+                print("Decoding API information.")
+                result = try JSONDecoder().decode([PicResp].self, from: data) //Morre nessa linha
                 
             }
             catch {
                 print("Error: \(error.localizedDescription)")
             }
             
-            guard let json = result else {
-                
+            guard let json = result?[0] else {
                 return
             }
-            print(json.fact)
-            //print(json.results.sunrise)
-           // print(json.results.width)
-           // print(json.results.height)
+            print(json.url)
             })
             task.resume()
     }
+    
+    //func getPic()
     @IBAction func dismissPopup(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
    
+    @IBOutlet weak var loadPic: UIImageView!
+  
     
-    
-    struct Resp: Codable {
+    /*struct Resp: Codable {
         let results: PicResp
         //let status: String?
-    }
+    }*/
     struct PicResp: Codable {
         //let sunrise: String?
-        //let breeds: [String]?
-        //let id: String?
-        //let url: String?
-        //let width: Int?
-        let fact: String?
-        //let height: Int?
+        //let fact: String?
+        let breeds: [String]
+        let id: String
+        let url: String
+        let width: Int
+        let height: Int
 
     }
+    
+
     /*
      
      "breeds":[]
