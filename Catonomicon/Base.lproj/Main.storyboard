@@ -120,6 +120,9 @@
                                 <rect key="frame" x="170" y="692" width="75" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" backgroundImage="Grupo 3"/>
+                                <connections>
+                                    <action selector="retryPic:" destination="mqL-Gg-5PP" eventType="touchUpInside" id="3cg-Wz-Zeh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49u-2b-UwM">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
