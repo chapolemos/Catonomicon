@@ -120,6 +120,9 @@
                                 <rect key="frame" x="170" y="692" width="75" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" backgroundImage="Grupo 3"/>
+                                <connections>
+                                    <action selector="retryPic:" destination="mqL-Gg-5PP" eventType="touchUpInside" id="3cg-Wz-Zeh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49u-2b-UwM">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -134,8 +137,8 @@
                                     <action selector="dismissPopup:" destination="mqL-Gg-5PP" eventType="touchUpInside" id="hPD-f0-gFO"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xD8-3r-9fH">
-                                <rect key="frame" x="0.0" y="171" width="414" height="358"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e6G-Vr-9aG">
+                                <rect key="frame" x="0.0" y="151" width="414" height="378"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -143,7 +146,7 @@
                         <viewLayoutGuide key="safeArea" id="9Fu-SX-u8L"/>
                     </view>
                     <connections>
-                        <outlet property="loadPic" destination="xD8-3r-9fH" id="s7D-fz-Ylt"/>
+                        <outlet property="loadPic" destination="e6G-Vr-9aG" id="wov-CK-PEC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gEL-jq-mcV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
